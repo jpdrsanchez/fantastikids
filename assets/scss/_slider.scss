@@ -47,6 +47,21 @@
     height: 620px;
     overflow: hidden;
     border-radius: 1.875rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 1.875rem;
+      border: 0.9375rem solid transparent;
+      background: transparent;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.3s;
+    }
 
     @include media-up(small-up) {
       width: 460px;
@@ -104,6 +119,12 @@
     &--brinquedos {
       background: #7a4aab;
 
+      &:hover {
+        &::after {
+          border-color: #623a8a;
+        }
+      }
+
       h1 {
         &::before {
           background-image: url('./images/slide/brinquedos-icon.svg');
@@ -117,6 +138,12 @@
 
     &--estrutura {
       background: #51aad5;
+
+      &:hover {
+        &::after {
+          border-color: #1587bd;
+        }
+      }
 
       h1 {
         &::before {
@@ -132,6 +159,12 @@
     &--videogame {
       background: #f8575c;
 
+      &:hover {
+        &::after {
+          border-color: #d5494e;
+        }
+      }
+
       h1 {
         &::before {
           background-image: url('./images/slide/videogame-icon.svg');
@@ -146,6 +179,12 @@
     &--futebol {
       background: #86bb95;
 
+      &:hover {
+        &::after {
+          border-color: #55918b;
+        }
+      }
+
       h1 {
         &::before {
           background-image: url('./images/slide/futebol.svg');
@@ -159,6 +198,12 @@
 
     &--adulto {
       background: #7a4aab;
+
+      &:hover {
+        &::after {
+          border-color: #623a8a;
+        }
+      }
 
       h1 {
         &::before {

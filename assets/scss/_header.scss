@@ -3,8 +3,7 @@
   padding-top: 0.25rem;
   padding-bottom: 0.1875rem;
   z-index: 999;
-  position: sticky;
-  top: 0;
+  position: relative;
 
   @include media-up(medium-up) {
     background-image: url('./images/header-bg.svg');

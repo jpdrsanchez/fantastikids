@@ -91,7 +91,7 @@ button {
   overflow: hidden;
 
   img {
-    animation: trainTransition 10s infinite linear;
+    animation: trainTransition 20s infinite linear;
     position: relative;
     top: -4px;
   }
@@ -129,4 +129,10 @@ button {
   @media (max-width: 1799px) {
     display: none;
   }
+}
+
+.inital-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 900;
 }
