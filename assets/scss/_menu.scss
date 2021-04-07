@@ -39,13 +39,15 @@
     }
 
     &::before {
-      content: '';
-      display: block;
-      width: 132px;
-      height: 85px;
-      background: url('./images/logo.png') no-repeat center center;
-      background-size: contain;
-      margin: 0 auto 2.8125rem;
+      @include media-down(large-down) {
+        content: '';
+        display: block;
+        width: 132px;
+        height: 85px;
+        background: url('./images/logo.png') no-repeat center center;
+        background-size: contain;
+        margin: 0 auto 2.8125rem;
+      }
     }
   }
 
