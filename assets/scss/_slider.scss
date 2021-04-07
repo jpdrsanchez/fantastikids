@@ -1,0 +1,240 @@
+.slider {
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        #f3f0ff -32.81%,
+        rgba(243, 240, 255, 0) 100%
+      ),
+      linear-gradient(90deg, #f3f0ff -32.81%, rgba(243, 240, 255, 0) 100%);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    z-index: 800;
+
+    @include media-up(small-up) {
+      width: 220px;
+    }
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      #f3f0ff -32.81%,
+      rgba(243, 240, 255, 0) 100%
+    );
+    z-index: 800;
+
+    @include media-up(small-up) {
+      width: 220px;
+    }
+  }
+
+  &__item {
+    width: 360px;
+    height: 620px;
+    overflow: hidden;
+    border-radius: 1.875rem;
+
+    @include media-up(small-up) {
+      width: 460px;
+    }
+
+    &--first {
+      width: 1px;
+      height: 1px;
+
+      @include media-up(small-up) {
+        width: calc(((100vw - 540px) / 2) - 30px);
+      }
+
+      @include media-up(medium-up) {
+        width: calc(((100vw - 720px) / 2) - 30px);
+      }
+
+      @include media-up(large-up) {
+        width: calc(((100vw - 960px) / 2) - 30px);
+      }
+
+      @include media-up(x-large-up) {
+        width: calc(((100vw - 1140px) / 2) - 30px);
+      }
+
+      @include media-up(xx-large-up) {
+        width: calc(((100vw - 1440px) / 2) - 30px);
+      }
+    }
+
+    &__header {
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    &__body {
+      padding-right: 25px;
+      padding-left: 25px;
+
+      @include media-up(small-up) {
+        padding-right: 50px;
+        padding-left: 50px;
+      }
+    }
+
+    &__text {
+      font-size: 1.125rem;
+      line-height: 1.875rem;
+    }
+
+    &--brinquedos {
+      background: #7a4aab;
+
+      h1 {
+        &::before {
+          background-image: url('./images/slide/brinquedos-icon.svg');
+        }
+      }
+
+      .slider__item__body {
+        border-top: 20px solid #623a8a;
+      }
+    }
+
+    &--estrutura {
+      background: #51aad5;
+
+      h1 {
+        &::before {
+          background-image: url('./images/slide/estrutura-icon.svg');
+        }
+      }
+
+      .slider__item__body {
+        border-top: 20px solid #1587bd;
+      }
+    }
+
+    &--videogame {
+      background: #f8575c;
+
+      h1 {
+        &::before {
+          background-image: url('./images/slide/videogame-icon.svg');
+        }
+      }
+
+      .slider__item__body {
+        border-top: 20px solid #d5494e;
+      }
+    }
+
+    &--futebol {
+      background: #86bb95;
+
+      h1 {
+        &::before {
+          background-image: url('./images/slide/futebol.svg');
+        }
+      }
+
+      .slider__item__body {
+        border-top: 20px solid #55918b;
+      }
+    }
+
+    &--adulto {
+      background: #7a4aab;
+
+      h1 {
+        &::before {
+          background-image: url('./images/slide/brinquedos-icon.svg');
+        }
+      }
+
+      .slider__item__body {
+        border-top: 20px solid #623a8a;
+      }
+    }
+
+    &__title {
+      font-size: 2.125rem;
+      font-weight: 700;
+      letter-spacing: -0.07em;
+      margin-bottom: 1.875rem;
+      margin-top: 2.125rem;
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 36px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-right: 0.9375rem;
+        background-size: contain;
+      }
+    }
+  }
+
+  &__nav {
+    text-align: center;
+    color: var(--dark-purple);
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    margin-top: 4.375rem;
+  }
+
+  .owl-nav {
+    button {
+      color: #623a8a !important;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      outline: 0px;
+      appearance: none;
+      background: none;
+      border: none;
+      font-size: 2rem !important;
+      position: absolute;
+      bottom: -140px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include media-up(medium-up) {
+        bottom: -101px;
+      }
+
+      &:nth-child(1) {
+        transform: translateX(calc(-50% - 20px));
+        @include media-up(medium-up) {
+          transform: translateX(-280px);
+        }
+      }
+
+      &:nth-child(2) {
+        transform: translateX(calc(-50% + 20px));
+        @include media-up(medium-up) {
+          transform: translateX(250px);
+        }
+      }
+    }
+  }
+}

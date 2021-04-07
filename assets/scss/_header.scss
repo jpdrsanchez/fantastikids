@@ -26,6 +26,7 @@
     appearance: none;
     cursor: pointer;
     position: relative;
+    z-index: 999;
 
     &:focus {
       outline: none;
