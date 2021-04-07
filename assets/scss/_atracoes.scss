@@ -5,12 +5,16 @@
 
   &__title {
     text-align: center;
-    font-size: 78px;
+    font-size: 60px;
     font-weight: 700;
     line-height: 93.5%;
     letter-spacing: -0.07em;
     margin-bottom: 1.875rem;
     color: var(--dark-purple);
+
+    @include media-up(small-up) {
+      font-size: 78px;
+    }
   }
 
   &__text {

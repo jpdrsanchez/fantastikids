@@ -41,13 +41,20 @@
     font-weight: 700;
     text-align: center;
     letter-spacing: -0.02em;
+
+    @include media-down(small-down) {
+      margin: 0 auto;
+    }
   }
 
   &__linkWrapper {
     display: grid;
-    grid-template-columns: 1fr 270px 1fr;
-    gap: 3.75rem;
     align-items: center;
+
+    @include media-up(small-up) {
+      gap: 3.75rem;
+      grid-template-columns: 1fr 270px 1fr;
+    }
 
     &:hover {
       .espaco__balls {
@@ -64,6 +71,10 @@
     display: flex;
     justify-content: space-between;
     overflow: hidden;
+
+    @include media-down(small-down) {
+      display: none;
+    }
 
     div {
       width: 28px;
