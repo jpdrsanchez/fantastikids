@@ -67,7 +67,10 @@
             <a href="#orcamento" class="home__link">Solicitar Orçamento</a>
             <a href="#sobre" class="home__link">Saiba mais</a>
           </nav>
-          <p class="home__scroll">Role para baixo para saber mais!</p>
+          <div class="home__scroll">
+            <div id="icon"></div>
+            <p>Role para baixo para saber mais!</p>
+          </div>
         </div>
       </div>
     </section>
@@ -249,7 +252,7 @@
             <label for="email">Email</label>
           </div>
           <div class="contato__input">
-            <input type="text" name="telefone" id="telefone" data-label>
+            <input type="text" name="telefone" id="telefone" data-label data-mask="tel">
             <label for="telefone">Telefone</label>
           </div>
           <div class="contato__input">
@@ -281,7 +284,13 @@
         <img src="https://www.noweb.io/shared/shortcutMono.png" alt="Noweb Publicidade">
       </a>
     </div>
+    <div class="bg-footer">
+      <img src="./assets/images/body-bg.png" alt="">
+    </div>
   </footer>
+  <div class="bg">
+    <img src="./assets/images/body-bg.png" alt="">
+  </div>
   <script src="./assets/script.js"></script>
   <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
   <script src="./assets/plugins/jquery-3.6.0.min.js"></script>
@@ -298,6 +307,20 @@
       });
     });
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+
+  <script>
+    var animation = bodymovin.loadAnimation({
+      // animationData: { /* ... */ },
+      container: document.getElementById('icon'), // required
+      path: './data.json', // required
+      renderer: 'svg', // required
+      loop: true, // optional
+      autoplay: true, // optional
+      name: "Demo Animation", // optional
+    });
+  </script>
+
 </body>
 
 </html>

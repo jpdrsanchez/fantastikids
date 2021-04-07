@@ -107,8 +107,13 @@
         filter: invert(1);
       }
 
+      &.active {
+        border-color: var(--yellow);
+      }
+
       &:focus {
         outline: none;
+        border-color: var(--yellow);
 
         & + label {
           transform: none;
@@ -117,6 +122,7 @@
           left: 0.625rem;
           background: var(--purple);
           padding: 0 0.625rem;
+          color: var(--yellow);
         }
       }
     }
@@ -133,6 +139,10 @@
       height: 160px;
       margin-bottom: 1.25rem;
 
+      &.active {
+        border-color: var(--yellow);
+      }
+
       & + label {
         transform: none;
         top: 1.25rem;
@@ -140,6 +150,7 @@
 
       &:focus {
         outline: none;
+        border-color: var(--yellow);
 
         & + label {
           transform: none;
@@ -148,6 +159,7 @@
           left: 0.625rem;
           background: var(--purple);
           padding: 0 0.625rem;
+          color: var(--yellow);
         }
       }
     }
@@ -176,6 +188,7 @@
         left: 0.625rem;
         background: var(--purple);
         padding: 0 0.625rem;
+        color: var(--yellow);
       }
     }
   }
@@ -193,5 +206,10 @@
     font-size: 1.25rem;
     padding: 1.25rem 1rem;
     border-radius: 0.9375rem;
+    transition: all 0.3s;
+
+    &:hover {
+      box-shadow: 0px 0px 30px rgba(255, 188, 1, 0.89);
+    }
   }
 }

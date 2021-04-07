@@ -1,0 +1,59 @@
+.enviado {
+  padding-top: 160px;
+  padding-bottom: 224px;
+
+  background: url('./images/enviado-bg-2.png') no-repeat bottom 100px left
+      calc(50% - 600px),
+    url('./images/enviar-bg-3.png') no-repeat top 200px right calc(50% - 400px),
+    url('./images/body-bg.png') no-repeat bottom -250px right;
+
+  &__body {
+    background: url('./images/enviado-bg.png') no-repeat center center;
+    background-size: cover;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.07em;
+
+    @include media-up(small-up) {
+      font-size: 70px;
+    }
+
+    @include media-up(medium-up) {
+      font-size: 112px;
+    }
+  }
+
+  &__text {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    text-align: center;
+    margin: 0 auto 3.125rem auto;
+    max-width: 705px;
+  }
+
+  &__link {
+    display: block;
+    max-width: 218px;
+    width: 100%;
+    margin: 0 auto;
+    background: var(--yellow);
+    color: var(--purple);
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+    padding: 1.625rem 1rem;
+    border-radius: 0.9375rem;
+    text-align: center;
+    transition: all 0.3s;
+
+    &:hover {
+      box-shadow: 0px 0px 30px rgba(255, 188, 1, 0.89);
+    }
+  }
+}

@@ -1,5 +1,24 @@
 .footer {
-  background: var(--dark-purple);
+  background-color: var(--dark-purple);
+  position: relative;
+
+  @include media-up(medium-up) {
+    background-image: url('./images/footer-bg.png');
+    background-repeat: no-repeat;
+    background-position: bottom 0 left calc(50% - 500px);
+  }
+
+  @include media-up(large-up) {
+    background-position: bottom 0 left calc(50% - 600px);
+  }
+
+  @include media-up(x-large-up) {
+    background-position: bottom 0 left calc(50% - 700px);
+  }
+
+  @include media-up(xx-large-up) {
+    background-position: bottom 0 left calc(50% - 850px);
+  }
 
   &__container {
     padding-top: 3.75rem;

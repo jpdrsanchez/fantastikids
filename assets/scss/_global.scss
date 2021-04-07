@@ -31,7 +31,10 @@ html {
 body {
   color: var(--white);
   font-family: var(--main-font);
-  background: var(--purple);
+  background-color: var(--purple);
+  background-image: url('./images/home/home-bg-2.png');
+  background-repeat: no-repeat;
+  background-position: top 70px right;
 }
 
 a {
@@ -105,5 +108,25 @@ button {
 
   100% {
     transform: translateX(-110px);
+  }
+}
+
+.bg {
+  position: absolute;
+  top: 900px;
+  right: 0;
+
+  @include media-down(x-large-down) {
+    display: none;
+  }
+}
+
+.bg-footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  @media (max-width: 1799px) {
+    display: none;
   }
 }
