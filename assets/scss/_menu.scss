@@ -16,18 +16,52 @@
       background: var(--purple);
       z-index: 998;
     }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5.25rem;
+      background: var(--dark-purple);
+    }
   }
 
   &__list {
     @include media-up(large-up) {
       display: flex;
       align-items: center;
+      position: relative;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 132px;
+      height: 85px;
+      background: url('./images/logo.png') no-repeat center center;
+      background-size: contain;
+      margin: 0 auto 2.8125rem;
     }
   }
 
   &__item {
     &:not(:last-child) {
-      margin-right: 1.875rem;
+      @include media-down(large-down) {
+        margin-bottom: 1.875rem;
+      }
+
+      @include media-up(large-up) {
+        margin-right: 1.875rem;
+      }
+    }
+
+    &:last-child {
+      @include media-down(large-down) {
+        margin-top: 3.125rem;
+      }
     }
   }
 
@@ -36,6 +70,11 @@
     font-size: 1.125rem;
     font-weight: 700;
     line-height: 1.375rem;
+
+    @include media-down(large-down) {
+      text-align: center;
+      font-size: 1.625rem;
+    }
 
     &--button {
       background: var(--yellow);

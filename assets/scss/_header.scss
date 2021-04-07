@@ -2,6 +2,9 @@
   background: rgba(#623a8a, 0.7);
   padding-top: 0.25rem;
   padding-bottom: 0.1875rem;
+  z-index: 999;
+  position: sticky;
+  top: 0;
 
   &__container {
     display: flex;
