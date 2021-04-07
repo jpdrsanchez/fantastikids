@@ -1,17 +1,180 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sanchez Boilerplate</title>
+  <title>Fantastikids</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/plugins/lightbox/css/lightbox.min.css">
   <link rel="stylesheet" href="./assets/style.css">
 </head>
+
 <body>
-  <div class="boilerplate">
-    <h1 class="boilerplate__title">Sanchez Boilerplate</h1>
-    <p class="boilerplate__text">HTML5 | SASS | BEM | Javascript</p>
+  <header class="header">
+    <div class="container header__container">
+      <a href="./index.html" aria-label="Home" class="header__logo">
+        <img src="./assets/images/logo.png" alt="Fantastikids Unidade V">
+      </a>
+      <nav class="header__nav">
+        <button aria-label="Abrir Menu" type="button" class="header__button" data-mobile="button"></button>
+        <div class="menu" data-mobile="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#home" class="menu__link">Home</a>
+            </li>
+            <li class="menu__item">
+              <a href="#sobre" class="menu__link">Sobre</a>
+            </li>
+            <li class="menu__item">
+              <a href="#espaco" class="menu__link">Espaço</a>
+            </li>
+            <li class="menu__item">
+              <a href="#atracoes" class="menu__link">Atrações</a>
+            </li>
+            <li class="menu__item">
+              <a href="#orcamento" class="menu__link menu__link--button">Solicitar Orçamento</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="train-animation">
+    <img src="./assets/images/trem.png" alt="Trem" aria-hidden="true">
   </div>
+  <main>
+    <section id="home" class="home">
+      <div class="home__gallery">
+        <a href="./assets/images/home/image-1.png" data-lightbox="home">
+          <img src="./assets/images/home/image-1.png" alt="Imagem 1">
+        </a>
+        <a href="./assets/images/home/image-2.png" data-lightbox="home">
+          <img src="./assets/images/home/image-2.png" alt="Imagem 2">
+        </a>
+        <a href="./assets/images/home/image-3.png" data-lightbox="home">
+          <img src="./assets/images/home/image-3.png" alt="Imagem 3">
+        </a>
+      </div>
+      <div class="container home__container">
+        <div class="home__content">
+          <h1 class="home__title">O melhor espaço do ABC</h1>
+          <p class="home__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Parturient et fringilla dui suspendisse eu curabitur posuere ultricies cursus. Cursus eu mauris mauris, urna diam faucibus. Faucibus in amet amet pretium mi est. Lacus, varius est quam scelerisque elementum eros vitae, pretium.</p>
+          <nav class="home__links">
+            <a href="#orcamento" class="home__link">Solicitar Orçamento</a>
+            <a href="#sobre" class="home__link">Saiba mais</a>
+          </nav>
+          <p class="home__scroll">Role para baixo para saber mais!</p>
+        </div>
+      </div>
+    </section>
+    <section id="sobre" class="sobre">
+      <div class="container sobre__container">
+        <div class="sobre__content">
+          <h1 class="sobre__title">Nos conheça melhor!</h1>
+          <p class="sobre__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas risus tristique donec tincidunt elementum ullamcorper enim aenean neque. Tortor, aenean tellus venenatis a integer est. Ullamcorper ornare volutpat lectus congue. Viverra in tellus ullamcorper suscipit ac venenatis interdum in. Nullam quisque pharetra, nulla velit cursus cras pharetra. Ultrices mi lacus tellus ac, risus, habitasse porta nunc, faucibus. Eleifend tristique orci commodo urna at eleifend cras sit et. Enim arcu a leo in blandit pretium lorem ridiculus. Eget viverra arcu facilisi in mattis lobortis lorem eu.</p>
+          <a href="#orcamento" class="sobre__link">Solicitar Orçamento</a>
+        </div>
+        <div class="sobre__image">
+          <img src="./assets/images/sobre/criancas.png" alt="Crianças">
+        </div>
+      </div>
+    </section>
+    <section class="espaco" id="espaco">
+      <div class="container espaco__container">
+        <h1 class="espaco__title">Nosso Espaço</h1>
+        <p class="espaco__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas risus tristique donec tincidunt elementum ullamcorper enim aenean neque. Tortor, aenean tellus venenatis a integer est. Ullamcorper ornare volutpat lectus congue. Viverra in tellus ullamcorper suscipit ac venenatis interdum in. Nullam quisque pharetra, nulla velit cursus cras pharetra.</p>
+        <div class="espaco__wrapper"></div>
+        <div class="espaco__linkWrapper">
+          <div class="espaco__balls espaco__balls--left" aria-hidden="true">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <a href="#orcamento" class="espaco__link">Solicitar Orçamento</a>
+          <div class="espaco__balls espaco__balls--right" aria-hidden="true">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="atracoes" id="atracoes">
+      <div class="container atracoes__container">
+        <h1 class="atracoes__title">Nossas Atrações</h1>
+        <p class="atracoes__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas risus tristique donec tincidunt elementum ullamcorper enim aenean neque. Tortor, aenean tellus venenatis a integer est. Ullamcorper ornare volutpat lectus congue. Viverra in tellus ullamcorper suscipit ac venenatis interdum in. Nullam quisque pharetra, nulla velit cursus cras pharetra.</p>
+      </div>
+    </section>
+    <section class="contato" id="orcamento">
+      <div class="container contato__container">
+        <div class="contato__content">
+          <h1 class="contato__title">Entre em contato</h1>
+          <p class="contato__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas risus tristique donec tincidunt elementum ullamcorper enim aenean neque.</p>
+          <div class="contato__map">
+            <div class="contato__map__inner">
+              <div style="width: 100%; height: 100%;"><iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=100%25&amp;hl=en&amp;q=Av.%20Dom%20Pedro%20II,%203206%20-%20Tamanduate%C3%AD%203%20-%20Santo%20Andr%C3%A9%20-%20SP%2009080-001+()&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+            </div>
+          </div>
+          <div class="contato__location">
+            <div class="contato__location__icon">
+              <ion-icon name="location-sharp"></ion-icon>
+            </div>
+            <p class="contato__location__text">Av. Dom Pedro II, 3206 - Tamanduateí 3 - Santo André - SP 09080-001</p>
+          </div>
+        </div>
+        <form action="./enviado.html" class="contato__form">
+          <div class="contato__input">
+            <input type="text" name="nome" id="nome" data-label>
+            <label for="nome">Nome</label>
+          </div>
+          <div class="contato__input">
+            <input type="text" name="email" id="email" data-label>
+            <label for="email">Email</label>
+          </div>
+          <div class="contato__input">
+            <input type="text" name="telefone" id="telefone" data-label>
+            <label for="telefone">Telefone</label>
+          </div>
+          <div class="contato__input">
+            <input type="number" name="convidados" id="convidados" data-label>
+            <label for="convidados">Número de Convidados</label>
+          </div>
+          <div class="contato__input">
+            <input type="date" name="data" id="data" data-label>
+            <label for="data">Data do evento</label>
+          </div>
+          <div class="contato__input">
+            <textarea name="mensagem" id="mensagem" data-label></textarea>
+            <label for="mensagem">Mensagem</label>
+          </div>
+          <button class="contato__button">Solicitar Orçamento</button>
+        </form>
+      </div>
+    </section>
+  </main>
   <script src="./assets/script.js"></script>
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  <script src="./assets/plugins/jquery-3.6.0.min.js"></script>
+  <script src="./assets/plugins/lightbox/js/lightbox.min.js"></script>
 </body>
-</html> 
+
+</html>
