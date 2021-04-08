@@ -17,6 +17,10 @@
     transform: matrix(-1, 0, 0, 1, 0, 0);
     z-index: 800;
 
+    @include media-down(small-down) {
+      display: none;
+    }
+
     @include media-up(small-up) {
       width: 220px;
     }
@@ -37,13 +41,17 @@
     );
     z-index: 800;
 
+    @include media-down(small-down) {
+      display: none;
+    }
+
     @include media-up(small-up) {
       width: 220px;
     }
   }
 
   &__item {
-    width: 360px;
+    width: 320px;
     height: 655px;
     overflow: hidden;
     border-radius: 1.875rem;
@@ -64,7 +72,7 @@
     }
 
     @include media-down(small-down) {
-      height: 610px;
+      height: 640px;
     }
 
     @include media-up(small-up) {
@@ -74,6 +82,10 @@
     &--first {
       width: 1px;
       height: 1px;
+
+      @include media-down(small-down) {
+        margin-right: -30px;
+      }
 
       @include media-up(small-up) {
         width: calc(((100vw - 540px) / 2) - 30px);
