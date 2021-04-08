@@ -1,7 +1,11 @@
 .home {
   padding-top: 4.875rem;
-  padding-bottom: 12.125rem;
+  padding-bottom: 4rem;
   position: relative;
+
+  @include media-up(medium-up) {
+    padding-bottom: 12.125rem;
+  }
 
   &__container {
     display: grid;
@@ -30,6 +34,19 @@
     letter-spacing: -0.07em;
     text-transform: uppercase;
     margin-bottom: 1.5rem;
+
+    &--desktop {
+      @include media-down(medium-down) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+      @include media-down(medium-down) {
+        display: block;
+      }
+    }
 
     @include media-down(medium-down) {
       text-align: center;
@@ -151,15 +168,12 @@
     display: grid;
     gap: 0.9375rem;
     z-index: 800;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 207px 145px;
+    gap: 1.125rem 0.875rem;
 
-    @include media-down(small-down) {
-      grid-auto-rows: 200px;
-    }
-
-    @include media-up(small-up) {
-      grid-template-columns: 1fr 1fr;
+    @include media-down(small-up) {
       grid-template-rows: 367px 205px;
-      gap: 1.125rem 0.875rem;
     }
 
     @include media-down(medium-down) {
@@ -198,9 +212,7 @@
       height: 100%;
 
       &:first-of-type {
-        @include media-up(small-up) {
-          grid-column: span 2;
-        }
+        grid-column: span 2;
       }
     }
 

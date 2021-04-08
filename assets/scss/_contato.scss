@@ -24,6 +24,10 @@
     letter-spacing: -0.07em;
     margin-bottom: 1.25rem;
 
+    @include media-down(small-down) {
+      font-size: 38px;
+    }
+
     @include media-down(medium-down) {
       text-align: center;
     }

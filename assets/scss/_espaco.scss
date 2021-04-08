@@ -19,6 +19,10 @@
     line-height: 93.5%;
     letter-spacing: -0.07em;
     margin-bottom: 1.875rem;
+
+    @include media-down(small-down) {
+      font-size: 38px;
+    }
   }
 
   &__text {

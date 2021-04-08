@@ -30,6 +30,10 @@
     margin-bottom: 1.875rem;
     color: var(--dark-purple);
 
+    @include media-down(small-down) {
+      font-size: 38px;
+    }
+
     @include media-down(large-down) {
       margin-left: auto;
       margin-right: auto;
@@ -64,6 +68,19 @@
     text-align: center;
     transition: all 0.3s;
 
+    &--desktop {
+      @include media-down(large-down) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+      @include media-down(large-down) {
+        display: block;
+      }
+    }
+
     &:hover {
       box-shadow: 0px 0px 30px #7a4aab;
     }
@@ -75,6 +92,16 @@
   }
 
   &__image {
+    @include media-down(large-down) {
+      margin: 0 auto;
+    }
+
+    img {
+      @include media-down(large-down) {
+        margin: 0 auto;
+      }
+    }
+
     @include media-up(large-up) {
       position: absolute;
       width: 370px;
