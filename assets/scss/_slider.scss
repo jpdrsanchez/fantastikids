@@ -44,7 +44,7 @@
 
   &__item {
     width: 360px;
-    height: 620px;
+    height: 560px;
     overflow: hidden;
     border-radius: 1.875rem;
     position: relative;
@@ -263,6 +263,10 @@
       left: 50%;
       transform: translateX(-50%);
       transition: all 0.3s;
+
+      @media (max-width: 511px) {
+        bottom: -185px;
+      }
 
       &:hover {
         color: var(--yellow) !important;
