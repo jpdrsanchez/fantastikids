@@ -75,6 +75,7 @@
     }
 
     &.active {
+      top: -22px;
       &::before {
         transform: rotate(45deg);
         box-shadow: none;

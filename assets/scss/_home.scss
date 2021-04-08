@@ -1,9 +1,10 @@
 .home {
-  padding-top: 4.875rem;
+  padding-top: 2.25rem;
   padding-bottom: 4rem;
   position: relative;
 
   @include media-up(medium-up) {
+    padding-top: 4.875rem;
     padding-bottom: 12.125rem;
   }
 

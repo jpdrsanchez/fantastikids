@@ -44,7 +44,7 @@
 
   &__item {
     width: 360px;
-    height: 620px;
+    height: 655px;
     overflow: hidden;
     border-radius: 1.875rem;
     position: relative;
@@ -64,7 +64,7 @@
     }
 
     @include media-down(small-down) {
-      height: 560px;
+      height: 610px;
     }
 
     @include media-up(small-up) {
@@ -97,6 +97,13 @@
     }
 
     &__header {
+      overflow: hidden;
+      height: 230px;
+
+      @include media-up(small-up) {
+        height: 300px;
+      }
+
       img {
         height: 100%;
         width: 100%;
@@ -247,7 +254,11 @@
     color: var(--dark-purple);
     font-size: 1.125rem;
     line-height: 1.875rem;
-    margin-top: 4.375rem;
+    margin-top: 5.625rem;
+
+    @include media-up(medium-up) {
+      margin-top: 4.375rem;
+    }
   }
 
   .owl-nav {
@@ -263,14 +274,10 @@
       border: none;
       font-size: 2rem !important;
       position: absolute;
-      bottom: -140px;
+      bottom: -70px;
       left: 50%;
       transform: translateX(-50%);
       transition: all 0.3s;
-
-      @media (max-width: 511px) {
-        bottom: -180px;
-      }
 
       &:hover {
         color: var(--yellow) !important;

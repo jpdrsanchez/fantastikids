@@ -92,6 +92,20 @@
   }
 
   &__image {
+    &__mobile {
+      display: none;
+      @include media-down(large-down) {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    &--desktop {
+      @include media-down(large-down) {
+        display: none;
+      }
+    }
+
     @include media-down(large-down) {
       margin: 0 auto;
     }
