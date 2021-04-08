@@ -14,11 +14,11 @@
   }
 
   @media (min-width: 1440px) {
-    background-position: center right -30%;
+    background-position: center right -15%;
   }
 
   @media (min-width: 1600px) {
-    background-position: center right -15%;
+    background-position: center right -5%;
   }
 
   &__title {
@@ -67,6 +67,11 @@
     &:hover {
       box-shadow: 0px 0px 30px #7a4aab;
     }
+
+    @include media-down(large-down) {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &__image {
@@ -86,7 +91,7 @@
 
     @include media-up(xx-large-up) {
       width: 570px;
-      top: -60px;
+      top: -25px;
       transform: none;
     }
   }
