@@ -336,6 +336,7 @@ img.mfp-img {
 }
 
 .mfp-title {
+  display: none !important;
   text-align: left;
   line-height: 18px;
   color: #f3f3f3;
